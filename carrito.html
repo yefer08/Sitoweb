@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - YEYE SHOP</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/carrito.js"></script> <!-- Archivo JS para la funcionalidad -->
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <h1>YEYE SHOP</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="testimonios.html">Testimonios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="ingresar.html">Ingresar</a></li>
+                <li id="carrito-icono">
+                    <a href="carrito.html"><img src="img/b.png" alt="Carrito" width="30"></a>
+                    <span id="contador-carrito">0</span>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- SECCIÓN CARRITO -->
+    <section id="carrito">
+        <h2>Carrito de Compras</h2>
+        <div class="contenedor-carrito">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Total</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody id="lista-carrito">
+                    <!-- Los productos se agregarán dinámicamente aquí -->
+                </tbody>
+            </table>
+            <div class="total-carrito">
+                <h3>Total: <span id="total-precio">$0</span></h3>
+                <button id="vaciar-carrito">Vaciar Carrito</button>
+                <button id="comprar">Finalizar Compra</button>
+            </div>
+        </div>
+    </sec

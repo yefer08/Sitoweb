@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Buzos Yeye</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <header>
+        <h1>YEYE SHOP</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="testimonios.html">Testimonios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="ingresar.html">Ingresar</a></li>
+                <li id="carrito-icono">
+                    <a href="carrito.html"><img src="img/b.png" alt="Carrito" width="30"></a>
+                    <span id="contador-carrito">0</span>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CARRUSEL -->
+    <section class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="img/banner/1.jpg" alt="Buzo 1"></div>
+            <div class="swiper-slide"><img src="img/banner/2.jpg" alt="Buzo 2"></div>
+            <div class="swiper-slide"><img src="img/banner/3.jpg" alt="Buzo 3"></div>
+            <div class="swiper-slide"><img src="img/banner/5.jpg" alt="Buzo 4"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </section>
+
+    <!-- SECCIÓN DESTACADA DE PRODUCTOS -->
+    <section id="productos-destacados" class="grid-container">
+        <h2>Productos Destacados</h2>
+        <div class="producto">
+            <img src="img/1.jpeg" alt="Buzo Verde">
+            <h2>Buzo Verde</h2>
+            <p>$55.000</p>
+            <button>Comprar</button>
+        </div>
+        <div class="producto">
+            <img src="img/2.jpeg" alt="Buzo Rosa">
+            <h2>Buzo Rosa</h2>
+            <p>$60.000</p>
+            <button>Comprar</button>
+        </div>
+        <div class="producto">
+            <img src="img/3.jpeg" alt="Buzo Cream">
+            <h2>Buzo Cream</h2>
+            <p>$40.000</p>
+            <button>Comprar</button>
+        </div>
+        <div class="ver-mas">
+            <a href="productos.html">Ver más productos →</a>
+        </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section id="testimonios">
+        <h2>Lo que dicen nuestros clientes</h2>
+        <p>"Los mejores buzos que he comprado, calidad 10/10!" - Juan P.</p>
+        <p>"Me encanta el diseño y la comodidad." - Ana G.</p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <!-- Sección de Información -->
+            <div class="footer-info">
+                <h3>YEYE SHOP</h3>
+                <p>La mejor tienda de buzos con estilo y calidad del pais.</p>
+                <p><strong>Dirección:</strong> Calle 39db, Medellín, Colombia</p>
+                <p><strong>Teléfono:</strong> +57 305 395 8822</p>
+                <p><strong>Email:</strong> <a href="mailto:contacto@yeyeshop.com">contacto@yeyeshop.com</a></p>
+            </div>
+    
+            <!-- Sección de Redes Sociales -->
+            <div class="footer-redes">
+                <h3>Síguenos</h3>
+                <a href="https://www.facebook.com" target="_blank"><img src="img/logoredes/facebook.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="img/logoredes/instagram.jpg" alt="Instagram"></a>
+                <a href="https://www.tiktok.com" target="_blank"><img src="img/logoredes/tiktok.png" alt="TikTok"></a>
+                <a href="https://wa.me/3053958822" target="_blank"><img src="img/logoredes/whats.png" alt="WhatsApp"></a>
+            </div>
+    
+            <!-- Sección del Mapa -->
+            <div class="footer-mapa">
+                <h3>Encuéntranos aquí</h3>
+                <iframe 
+                    src="https://www.google.com/maps/place/San+Javier,+Medellín,+San+Javier,+Medellín,+Antioquia/@6.2557381,-75.6264229,16z/data=!3m1!4b1!4m6!3m5!1s0x8e442bd61b35b135:0x7ac589026488978b!8m2!3d6.2556509!4d-75.6186265!16s%2Fg%2F1222zgkc?hl=es&entry=ttu&g_ep=EgoyMDI1MDMxOS4xIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D" 
+                    width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    
+        <!-- Derechos de Autor -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 YEYE SHOP - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            pagination: { el: ".swiper-pagination", clickable: true },
+            autoplay: { delay: 3000 }, /* Cambio automático */
+            loop: true /* Hace que el carrusel sea infinito */
+        });
+    </script>
+</body>
+</html>
+

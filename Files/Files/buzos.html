@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buzos - YEYE SHOP</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <h1>YEYE SHOP</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="buzos.html">Buzos</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li id="carrito-icono">
+                    <a href="#"><img src="img/b.png" alt="Carrito" width="30"></a>
+                    <span id="contador-carrito">0</span>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- SECCIÓN DE BUZOS -->
+    <section id="productos" class="grid-container">
+        <div class="producto">
+            <img src="img/1.jpeg" alt="Buzo verde">
+            <h2>Buzo Verde</h2>
+            <p>$55.000</p>
+            <button class="btn-comprar">Comprar</button>
+        </div>
+        <div class="producto">
+            <img src="img/2.jpeg" alt="Buzo Rosa">
+            <h2>Buzo Rosa</h2>
+            <p>$60.000</p>
+            <button class="btn-comprar">Comprar</button>
+        </div>
+        <div class="producto">
+            <img src="img/3.jpeg" alt="Buzo Cream">
+            <h2>Buzo Cream</h2>
+            <p>$40.000</p>
+            <button class="btn-comprar">Comprar</button>
+        </div>
+        <div class="producto">
+            <img src="img/4.jpeg" alt="Buzo Azul">
+            <h2>Buzo Azul</h2>
+            <p>$45.000</p>
+            <button class="btn-comprar">Comprar</button>
+        </div>
+    </section>
+
+    <!-- BOTÓN PARA VOLVER AL INICIO -->
+    <div class="boton-volver">
+        <a href="index.html">⬅ Volver al Inicio</a>
+    </div>
+
+    <!-- FOOTER -->
+    <footer id="contacto">
+        <p>&copy; 2025 Buzos Shop - Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let carrito = [];
+            const botonesCompra = document.querySelectorAll(".btn-comprar");
+            const contadorCarrito = document.getElementById("contador-carrito");
+
+            botonesCompra.forEach(boton => {
+                boton.addEventListener("click", function() {
+                    carrito.push(boton.parentElement.querySelector("h2").textContent);
+                    contadorCarrito.textContent = carrito.length;
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
